@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Set character set to UTF-8 -->
     <meta charset="UTF-8">
+
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Responsive viewport for various device sizes -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon for the website -->
     <link rel="shortcut icon" href="media/favicon.ico">
+
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="styles/styles.css"/>
+
+    <!-- Defer the loading of the JavaScript file until HTML parsing is complete -->
     <script src="scripts/index.js" defer></script>
+
+    <!-- Title of the webpage -->
     <title>Pomodoro Timer</title>
 </head>
 <body>
+    <!-- Main container with flex layout, aligned in a column, and centered -->
     <div class="flex-column flex-center">
+
         <!-- Site header and navigation bar -->
         <div class="flex-center margin-small">
             <h2>Pomodoro Timer</h2>
         </div>
+
+        <!-- Settings button with an image -->
         <button id="settings-button">
             <img src="media/settings.png" alt="Settings Button"/>
         </button>
 
-        <!-- Timer -->
+        <!-- Timer section with buttons for Pomodoro, Short Break, and Long Break -->
         <div class="flex-center flex-column" id="timer-wrapper">
             <div class="flex-center gap-medium" id="timer-buttons">
                 <button id="pomodoro">
@@ -32,7 +49,9 @@
                     <h3>Long Break</h3>
                 </button>
             </div>
+            <!-- Display the timer -->
             <h1 class="margin-small" id="timer">00:00</h1>
+            <!-- Button to start/stop the timer -->
             <button id="start-stop-button">
                 <h3>Start</h3>
             </button>
@@ -43,6 +62,7 @@
             <div class="modal-content" id="settings-modal-content">
                 <div class="flex-center flex-column gap-medium">
                     <h3>Settings</h3>
+                    <!-- Input fields for adjusting Pomodoro, Short Break, and Long Break durations -->
                     <div class="flex-center gap-medium" id="time-settings">
                         <div class="flex-column flex-center gap-small">
                             <p>Pomodoro</p>
@@ -57,6 +77,7 @@
                             <input id="long-minutes" type="text">
                         </div>
                     </div>
+                    <!-- Button to save the settings -->
                     <button id="save-settings">Save</button>
                 </div>
             </div>
